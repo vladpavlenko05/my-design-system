@@ -1,32 +1,35 @@
-# React + TypeScript + Vite
+# Accessible React Design System & Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A production-grade, accessible React component library built with **TypeScript**, **Tailwind CSS (v4)**, and **Storybook**. Designed with a strong focus on system thinking, component scalability, and WCAG accessibility standards for modern web engineering.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Accessibility First (a11y):** Built following WCAG guidelines using semantic HTML, custom ARIA attributes (`aria-invalid`, `aria-describedby`, `role="dialog"`), keyboard navigation (`Escape` triggers, focus management), and React `useId()`.
+- **Modern Tech Stack:** Powered by Vite, React 19, TypeScript, and Tailwind CSS v4.
+- **Isolated Development:** Fully documented and tested stories using Storybook with real-time automated a11y testing (`@storybook/addon-a11y`).
 
-## React Compiler
+## Components Developed
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Button:** Flexible button component supporting multiple variants (`primary`, `secondary`, `danger`), sizes, loading states, and keyboard focus indicators.
+2. **Input:** Form input component featuring dynamic helper text, validation error states, and automatic accessibility pairing using `useId()`.
+3. **Modal (Dialog):** Accessible overlay dialog supporting backdrop blur, `Escape` key dismissal, backdrop interaction handlers, and background scroll locking.
 
-## Expanding the Oxlint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- **Framework:** React, Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Documentation & Testing:** Storybook, `@storybook/addon-a11y`
+- **Version Control:** Git, GitHub
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+## Getting Started Locally
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+```bash
+# Clone the repository
+git clone [https://github.com/vladpavlenko05/my-design-system.git](https://github.com/vladpavlenko05/my-design-system.git)
+
+# Install dependencies
+npm install
+
+# Run Storybook development server
+npm run storybook
